@@ -75,43 +75,88 @@ img { max-width: 100%; display: block; }
 .footer-col:nth-of-type(2) { left: 840px; }
 .footer-col:nth-of-type(3) { left: 1181px; }
 
-/* Tablet / small laptop */
+/* ===== Laptop / tablet (1300px and below) ===== */
 @media (max-width: 1300px) {
-  .nav-links { position: static; transform: none; }
-  .hero { height: auto; min-height: 560px; padding: 160px 72px 80px; }
+  .navbar { padding: 0 40px; }
+  .logo { font-size: 40px; line-height: 60px; }
+  .nav-links { position: static; transform: none; gap: 20px; }
+  .nav-actions { gap: 12px; }
+  .btn { width: 130px; height: 48px; }
+
+  .hero { height: auto; min-height: 560px; padding: 150px 40px 90px; }
   .hero h1 { font-size: 40px; line-height: 56px; }
-  .about { flex-direction: column; }
-  .about-text, .about-image, .about-image img { width: 100%; }
-  .cards { flex-wrap: wrap; }
-  .card { height: auto; min-height: 320px; }
-  .testimonial { height: auto; padding: 60px 72px; flex-wrap: wrap; }
-  .cta { height: auto; padding: 80px 72px; flex-wrap: wrap; gap: 40px; }
-  .cta-text { margin-left: 0; }
-  .footer { height: auto; display: flex; flex-wrap: wrap; gap: 48px 80px; padding: 60px 72px; }
+  .hero p { font-size: 20px; line-height: 30px; }
+
+  .about { max-width: calc(100% - 80px); gap: 40px; margin-top: 72px; }
+  .about-text { width: auto; flex: 1; }
+  .about-image { flex: 0 0 40%; }
+  .about-image img { width: 100%; height: 340px; }
+
+  .why { padding: 0 40px 90px; margin-top: 72px; }
+  .why h2 { font-size: 40px; line-height: 56px; }
+  .cards { gap: 24px; }
+  .card { flex: 1 1 0; width: auto; max-width: 306px; height: auto; min-height: 300px; }
+
+  .testimonial { height: auto; padding: 60px 40px; gap: 40px; }
+  .avatar-large { width: 220px; height: 220px; }
+  .testimonial-text { flex: 1; width: auto; }
+
+  .cta { height: auto; padding: 80px 40px; align-items: center; }
+  .avatars { width: 280px; height: 330px; }
+  .av { width: 124px; height: 124px; }
+  .av2 { top: 100px; left: 156px; }
+  .av3 { top: 204px; left: 0; }
+  .cta-text { margin-left: 48px; flex: 1; width: auto; }
+  .cta-text h2 { font-size: 40px; line-height: 56px; }
+
+  .footer { height: auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding: 60px 40px; }
   .footer .logo, .footer-col { position: static; }
 }
 
-/* Phone */
-@media (max-width: 700px) {
-  .navbar { padding: 0 16px; }
+/* ===== Small tablet (900px and below) ===== */
+@media (max-width: 900px) {
   .nav-links { display: none; }
   .logo { font-size: 32px; line-height: 48px; }
-  .btn { width: 100px; height: 44px; }
-  .nav-actions { gap: 10px; }
-  .hero { padding: 100px 20px 60px; }
-  .hero h1 { font-size: 30px; line-height: 42px; }
-  .hero p { font-size: 18px; line-height: 28px; }
-  .about { max-width: calc(100% - 40px); margin-top: 56px; }
-  .about-text h2, .why h2, .cta-text h2 { font-size: 32px; line-height: 44px; }
-  .about-image img { height: 260px; }
-  .why { padding: 0 20px 60px; margin-top: 56px; }
-  .card { width: 100%; }
-  .testimonial { padding: 40px 20px; }
+
+  .about { flex-direction: column; }
+  .about-image { flex: none; width: 100%; }
+  .about-image img { height: 300px; }
+
+  .cards { flex-direction: column; align-items: center; }
+  .card { width: 100%; max-width: 100%; min-height: 0; }
+
+  .testimonial { flex-direction: column; align-items: flex-start; }
   .avatar-large { width: 200px; height: 200px; }
-  .cta { padding: 56px 20px; }
+
+  .cta { flex-direction: column; align-items: flex-start; gap: 40px; }
   .avatars { width: 260px; height: 290px; }
   .av { width: 110px; height: 110px; }
   .av2 { top: 90px; left: 140px; }
-  .av3 { top: 180px; }
-  .footer { padding: 40px 20px; gap: 32px 40px; }
+  .av3 { top: 180px; left: 0; }
+  .cta-text { margin-left: 0; }
+  .cta-text h2 { font-size: 32px; line-height: 44px; }
+
+  .footer { flex-wrap: wrap; gap: 32px 56px; }
+  .footer .logo { width: 100%; }
+}
+
+/* ===== Phone (700px and below) ===== */
+@media (max-width: 700px) {
+  .navbar { padding: 0 16px; }
+  .btn { width: 100px; height: 44px; font-size: 15px; }
+  .nav-actions { gap: 10px; }
+
+  .hero { padding: 100px 20px 60px; min-height: 0; }
+  .hero h1 { font-size: 30px; line-height: 42px; }
+  .hero p { font-size: 18px; line-height: 28px; }
+
+  .about { max-width: calc(100% - 40px); margin-top: 56px; }
+  .about-text h2, .why h2 { font-size: 32px; line-height: 44px; }
+  .about-image img { height: 240px; }
+
+  .why { padding: 0 20px 60px; margin-top: 56px; }
+  .testimonial { padding: 40px 20px; }
+  .quote { margin-bottom: 32px; }
+  .cta { padding: 56px 20px; }
+  .footer { padding: 40px 20px; gap: 28px 40px; }
 }
