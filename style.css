@@ -33,7 +33,7 @@ img { max-width: 100%; display: block; }
 .about { width: 1296px; max-width: calc(100% - 144px); margin: 96px auto 0; display: flex; justify-content: space-between; gap: 84px; align-items: flex-start; }
 .about-text { width: 686px; display: flex; flex-direction: column; gap: 24px; }
 .about-text h2 { font-size: 48px; line-height: 72px; font-weight: 700; }
-.about-text p { font-size: 16px; line-height: 27px; }
+.about-text p { font-size: 18px; line-height: 27px; }
 .about-image { flex: none; }
 .about-image img { width: 500px; height: 404px; object-fit: cover; border-radius: 8px; }
 
@@ -41,23 +41,23 @@ img { max-width: 100%; display: block; }
 .why { margin-top: 96px; padding: 0 72px 110px; text-align: center; }
 /* FIX: check this weight in Figma Inspect (500 or 700) */
 .why h2 { font-size: 48px; line-height: 72px; font-weight: 500; margin-bottom: 24px; }
-.why-intro { width: 1026px; max-width: 100%; margin: 0 auto 56px; text-align: left; font-size: 16px; line-height: 27px; }
+.why-intro { width: 1026px; max-width: 100%; margin: 0 auto 56px; text-align: left; font-size: 18px; line-height: 27px; }
 .cards { display: flex; justify-content: center; gap: 47px; }
 /* FIX: min-height, so a longer text can never overflow the card */
 .card { width: 306px; min-height: 324px; padding: 12px 18px; text-align: left; border: 1px solid var(--border); border-radius: 8px; }
 .icon-circle { width: 92px; height: 92px; border-radius: 50%; background: #f1f0fb; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; }
 .icon-circle img { width: 32px; height: 32px; }
-.card h3 { font-size: 24px; line-height: 36px; font-weight: 500; margin-bottom: 4px; }
-.card p { font-size: 16px; line-height: 27px; color: var(--muted); }
+.card h3 { font-size: 20px; line-height: 30px; font-weight: 500; margin-bottom: 8px; }
+.card p { font-size: 18px; line-height: 27px; color: var(--muted); }
 
 /* TESTIMONIAL */
 .testimonial { height: 492px; background: var(--cream); display: flex; align-items: center; gap: 57px; padding: 0 72px 0 83px; }
 .avatar-large { width: 300px; height: 300px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
 .testimonial-text { width: 920px; max-width: 100%; }
-.quote { font-size: 16px; line-height: 27px; margin-bottom: 56px; }
+.quote { font-size: 18px; line-height: 27px; margin-bottom: 56px; }
 .person { line-height: 36px; margin-bottom: 24px; }
 .person strong { font-size: 24px; font-weight: 500; }
-.person span { font-size: 16px; }
+.person span { font-size: 18px; }
 
 /* CTA */
 .cta { height: 604px; display: flex; align-items: flex-start; padding: 98px 72px 0 154px; }
@@ -66,16 +66,16 @@ img { max-width: 100%; display: block; }
 .av1 { top: 0; left: 0; }
 .av2 { top: 128px; left: 198px; }
 .av3 { top: 255px; left: 0; }
-.cta-text { margin-left: 118px; width: 640px; max-width: 100%; display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
+.cta-text { margin-left: 118px; width: 680px; max-width: 100%; display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
 /* FIX: was 500, Figma heading is bold */
 .cta-text h2 { font-size: 48px; line-height: 72px; font-weight: 700; }
-.cta-text p { max-width: 580px; font-size: 16px; line-height: 27px; }
+.cta-text p { max-width: 600px; font-size: 18px; line-height: 27px; }
 
 /* FOOTER */
 /* FIX: grid instead of position:absolute + nth-of-type (breaks if the HTML order changes) */
 .footer { height: 401px; background: var(--cream); display: grid; grid-template-columns: 35.4% 22.9% 23.7% 1fr; align-items: start; padding-top: 59px; }
 .footer .logo { margin: 11px 0 0 78px; }
-.footer-col { display: flex; flex-direction: column; gap: 16px; font-size: 16px; line-height: 27px; }
+.footer-col { display: flex; flex-direction: column; gap: 16px; font-size: 18px; line-height: 27px; }
 .footer-col h4 { font-size: 24px; line-height: 36px; font-weight: 500; margin-bottom: 12px; }
 
 /* ===== Laptop / tablet (1200px and below) =====
