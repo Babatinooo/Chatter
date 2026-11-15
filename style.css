@@ -1,180 +1,377 @@
-/* Chatter landing page - built for a 1440px Figma frame */
-:root { --primary: #543ee0; --cream: #fff4e0; --text: #0e0e0e; --muted: #555; --border: #e4e4e7; }
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: "DM Sans", sans-serif; color: var(--text); background: #fff; line-height: 1.7; }
-a { text-decoration: none; color: inherit; }
-img { max-width: 100%; display: block; }
-
-.btn {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 157px; height: 56px; padding: 8px 16px; border-radius: 8px;
-  border: 1px solid var(--primary); font-size: 16px; font-weight: 500; line-height: 1; white-space: nowrap;
-}
-.btn-primary { background: var(--primary); color: #fff; }
-.btn-outline { background: #fff; color: var(--text); border-color: #222; }
-.logo { color: var(--primary); font-weight: 700; font-size: 48px; line-height: 72px; }
-
-/* NAVBAR */
-.navbar { position: relative; height: 98px; padding: 0 72px; display: flex; align-items: center; justify-content: space-between; background: #fff; border: 1px solid #d0d0d0; }
-.nav-links { position: absolute; left: 560px; top: 50%; transform: translateY(-50%); display: flex; gap: 24px; font-size: 16px; font-weight: 500; line-height: 24px; }
-.nav-actions { display: flex; gap: 24px; }
-
-/* HERO */
-.hero { height: 764px; padding: 216px 0 0 228px; color: #fff;
-  background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url("hero.jpg") center / cover no-repeat, #555; }
-.hero-content { width: 984px; max-width: 100%; display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
-.hero h1 { font-size: 48px; line-height: 72px; font-weight: 700; }
-.hero p { width: 740px; max-width: 100%; font-size: 24px; line-height: 36px; font-weight: 500; }
-
-/* ABOUT */
-.about { width: 1296px; max-width: calc(100% - 144px); margin: 96px auto 0; display: flex; justify-content: space-between; gap: 84px; align-items: flex-start; }
-.about-text { width: 686px; display: flex; flex-direction: column; gap: 24px; }
-.about-text h2 { font-size: 48px; line-height: 72px; font-weight: 700; }
-.about-text p { font-size: 16px; line-height: 27px; }
-.about-image img { width: 500px; height: 404px; object-fit: cover; border-radius: 8px; }
-
-/* WHY JOIN */
-.why { margin-top: 96px; padding: 0 72px 110px; text-align: center; }
-.why h2 { font-size: 48px; line-height: 72px; font-weight: 500; margin-bottom: 24px; }
-.why-intro { width: 1026px; max-width: 100%; margin: 0 auto 56px; text-align: left; font-size: 16px; line-height: 27px; }
-.cards { display: flex; justify-content: center; gap: 47px; }
-.card { width: 306px; height: 320px; padding: 12px 18px; text-align: left; border: 1px solid var(--border); border-radius: 8px; }
-.icon-circle { width: 92px; height: 92px; border-radius: 50%; background: #f1f0fb; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; }
-.icon-circle img { width: 32px; height: 32px; }
-.card h3 { font-size: 24px; line-height: 36px; font-weight: 500; margin-bottom: 4px; }
-.card p { font-size: 16px; line-height: 27px; color: var(--muted); }
-
-/* TESTIMONIAL */
-.testimonial { height: 492px; background: var(--cream); display: flex; align-items: center; gap: 57px; padding: 0 72px 0 83px; }
-.avatar-large { width: 300px; height: 300px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
-.testimonial-text { width: 920px; max-width: 100%; }
-.quote { font-size: 16px; line-height: 27px; margin-bottom: 56px; }
-.person { line-height: 36px; margin-bottom: 24px; }
-.person strong { font-size: 24px; font-weight: 500; }
-.person span { font-size: 16px; }
-
-/* CTA */
-.cta { height: 604px; display: flex; align-items: flex-start; padding: 98px 72px 0 154px; }
-.avatars { position: relative; width: 355px; height: 412px; flex-shrink: 0; }
-.av { position: absolute; width: 157px; height: 157px; border-radius: 50%; object-fit: cover; }
-.av1 { top: 0; left: 0; }
-.av2 { top: 128px; left: 198px; }
-.av3 { top: 255px; left: 0; }
-.cta-text { margin-left: 118px; width: 640px; max-width: 100%; display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
-.cta-text h2 { font-size: 48px; line-height: 72px; font-weight: 500; }
-.cta-text p { max-width: 580px; font-size: 16px; line-height: 27px; }
-
-/* FOOTER */
-.footer { position: relative; height: 401px; background: var(--cream); }
-.footer .logo { position: absolute; left: 78px; top: 70px; }
-.footer-col { position: absolute; top: 59px; display: flex; flex-direction: column; gap: 16px; font-size: 16px; line-height: 27px; }
-.footer-col h4 { font-size: 24px; line-height: 36px; font-weight: 500; margin-bottom: 12px; }
-.footer-col:nth-of-type(1) { left: 510px; }
-.footer-col:nth-of-type(2) { left: 840px; }
-.footer-col:nth-of-type(3) { left: 1181px; }
-
-/* ===== Laptop / tablet (1300px and below) ===== */
-@media (max-width: 1300px) {
-  .navbar { padding: 0 40px; }
-  .logo { font-size: 40px; line-height: 60px; }
-  .nav-links { position: static; transform: none; gap: 20px; }
-  .nav-actions { gap: 12px; }
-  .btn { width: 130px; height: 48px; }
-
-  .hero { height: auto; min-height: 560px; padding: 150px 40px 90px; }
-  .hero h1 { font-size: 40px; line-height: 56px; }
-  .hero p { font-size: 20px; line-height: 30px; }
-
-  .about { max-width: calc(100% - 80px); gap: 40px; margin-top: 72px; }
-  .about-text { width: auto; flex: 1; }
-  .about-image { flex: 0 0 40%; }
-  .about-image img { width: 100%; height: 340px; }
-
-  .why { padding: 0 40px 90px; margin-top: 72px; }
-  .why h2 { font-size: 40px; line-height: 56px; }
-  .cards { gap: 24px; }
-  .card { flex: 1 1 0; width: auto; max-width: 306px; height: auto; min-height: 300px; }
-
-  .testimonial { height: auto; padding: 60px 40px; gap: 40px; }
-  .avatar-large { width: 220px; height: 220px; }
-  .testimonial-text { flex: 1; width: auto; }
-
-  .cta { height: auto; padding: 80px 40px; align-items: center; }
-  .avatars { width: 280px; height: 330px; }
-  .av { width: 124px; height: 124px; }
-  .av2 { top: 100px; left: 156px; }
-  .av3 { top: 204px; left: 0; }
-  .cta-text { margin-left: 48px; flex: 1; width: auto; }
-  .cta-text h2 { font-size: 40px; line-height: 56px; }
-
-  .footer { height: auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding: 60px 40px; }
-  .footer .logo, .footer-col { position: static; }
-}
-
-/* ===== Small tablet (900px and below) ===== */
-@media (max-width: 900px) {
-  .nav-links { display: none; }
-  .logo { font-size: 32px; line-height: 48px; }
-
-  .about { flex-direction: column; }
-  .about-image { flex: none; width: 100%; }
-  .about-image img { height: 300px; }
-
-  .cards { flex-direction: column; align-items: center; }
-  .card { width: 100%; max-width: 100%; min-height: 0; }
-
-  .testimonial { flex-direction: column; align-items: flex-start; }
-  .avatar-large { width: 200px; height: 200px; }
-
-  .cta { flex-direction: column; align-items: flex-start; gap: 40px; }
-  .avatars { width: 260px; height: 290px; }
-  .av { width: 110px; height: 110px; }
-  .av2 { top: 90px; left: 140px; }
-  .av3 { top: 180px; left: 0; }
-  .cta-text { margin-left: 0; }
-  .cta-text h2 { font-size: 32px; line-height: 44px; }
-
-  .footer { flex-wrap: wrap; gap: 32px 56px; }
-  .footer .logo { width: 100%; }
-}
-
-/* ===== Phone (700px and below) ===== */
 @media (max-width: 700px) {
-  .navbar { padding: 0 16px; }
-  .btn { width: 100px; height: 44px; font-size: 15px; }
-  .nav-actions { gap: 10px; }
 
-  .hero { padding: 100px 20px 60px; min-height: 0; }
-  .hero h1 { font-size: 30px; line-height: 42px; }
-  .hero p { font-size: 18px; line-height: 28px; }
+  /* NAVBAR */
+  .navbar {
+    height: 36px;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-  .about { max-width: calc(100% - 40px); margin-top: 56px; }
-  .about-text h2, .why h2 { font-size: 32px; line-height: 44px; }
-  .about-image img { height: 240px; }
+  .logo {
+    font-size: 20px;
+    line-height: 1;
+  }
 
-  .why { padding: 0 20px 60px; margin-top: 56px; }
-  .testimonial { padding: 40px 20px; }
-  .quote { margin-bottom: 32px; }
-  .cta { padding: 56px 20px; }
-  .footer { padding: 40px 20px; gap: 28px 40px; }
+  .nav-links {
+    display: flex;
+    position: static;
+    transform: none;
+    gap: 12px;
+    font-size: 7px;
+    line-height: 1;
+  }
+
+  .nav-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  .btn {
+    width: 64px;
+    min-width: 0;
+    height: 24px;
+    padding: 4px 8px;
+    font-size: 7px;
+    border-radius: 4px;
+  }
+
+
+  /* HERO SECTION */
+  .hero {
+    height: 297px;
+    min-height: 0;
+    padding: 84px 0 0 15.7%;
+    background-position: center, 28% center;
+  }
+
+  .hero-content {
+    width: 390px;
+    max-width: 85%;
+    gap: 12px;
+  }
+
+  .hero h1 {
+    font-size: 20px;
+    line-height: 29px;
+  }
+
+  .hero p {
+    width: 350px;
+    max-width: 100%;
+    font-size: 10px;
+    line-height: 16px;
+  }
+
+  .hero .btn {
+    width: 64px;
+    height: 22px;
+    font-size: 7px;
+  }
+
+
+  /* ABOUT SECTION */
+  .about {
+    width: auto;
+    max-width: calc(100% - 54px);
+    margin: 38px auto 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .about-text {
+    flex: 1;
+    width: auto;
+    gap: 12px;
+  }
+
+  .about-text h2 {
+    font-size: 23px;
+    line-height: 32px;
+  }
+
+  .about-text p {
+    font-size: 7px;
+    line-height: 10px;
+  }
+
+  .about-image {
+    flex: 0 0 37%;
+    width: auto;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: 157px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+
+  /* WHY JOIN SECTION */
+  .why {
+    margin-top: 36px;
+    padding: 0 5% 40px;
+  }
+
+  .why h2 {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .why-intro {
+    width: 100%;
+    margin: 0 auto 20px;
+    font-size: 7px;
+    line-height: 11px;
+    text-align: left;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .card {
+    flex: 1 1 0;
+    width: auto;
+    max-width: none;
+    min-width: 0;
+    height: auto;
+    min-height: 126px;
+    padding: 6px;
+    border-radius: 4px;
+  }
+
+  .icon-circle {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 5px;
+  }
+
+  .icon-circle img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .card h3 {
+    font-size: 12px;
+    line-height: 17px;
+    margin-bottom: 3px;
+  }
+
+  .card p {
+    font-size: 7px;
+    line-height: 10px;
+  }
+
+
+  /* TESTIMONIAL SECTION */
+  .testimonial {
+    height: 191px;
+    padding: 30px 6%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 22px;
+  }
+
+  .avatar-large {
+    width: 116px;
+    height: 116px;
+    flex-shrink: 0;
+  }
+
+  .testimonial-text {
+    flex: 1;
+    width: auto;
+    min-width: 0;
+  }
+
+  .quote {
+    font-size: 7px;
+    line-height: 11px;
+    margin-bottom: 20px;
+  }
+
+  .person {
+    line-height: 15px;
+    margin-bottom: 10px;
+  }
+
+  .person strong {
+    display: inline;
+    font-size: 11px;
+  }
+
+  .person span {
+    display: inline;
+    font-size: 7px;
+  }
+
+  .testimonial .btn {
+    width: 65px;
+    height: 22px;
+  }
+
+
+  /* CTA SECTION */
+  .cta {
+    height: 235px;
+    padding: 38px 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+  }
+
+  .avatars {
+    position: relative;
+    width: 138px;
+    height: 150px;
+    flex-shrink: 0;
+  }
+
+  .av {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+  }
+
+  .av1 {
+    top: 0;
+    left: 0;
+  }
+
+  .av2 {
+    top: 48px;
+    left: 77px;
+  }
+
+  .av3 {
+    top: 96px;
+    left: 0;
+  }
+
+  .cta-text {
+    margin-left: 42px;
+    width: auto;
+    flex: 1;
+    min-width: 0;
+    gap: 12px;
+  }
+
+  .cta-text h2 {
+    font-size: 20px;
+    line-height: 29px;
+  }
+
+  .cta-text p {
+    font-size: 7px;
+    line-height: 11px;
+  }
+
+  .cta-text .btn {
+    width: 65px;
+    height: 22px;
+  }
+
+
+  /* FOOTER */
+  .footer {
+    height: 155px;
+    padding: 27px 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .footer .logo {
+    position: static;
+    font-size: 20px;
+    line-height: 30px;
+    width: auto;
+  }
+
+  .footer-col {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 7px;
+    line-height: 11px;
+  }
+
+  .footer-col h4 {
+    font-size: 11px;
+    line-height: 16px;
+    margin-bottom: 5px;
+  }
+
 }
 
-/* ===== Fixes for stacked layouts ===== */
-@media (max-width: 900px) {
-  /* in a column, flex-basis 0 collapsed the cards to zero height */
-  .card { flex: none; height: auto; }
-}
 
-@media (max-width: 700px) {
-  .btn { width: auto; min-width: 100px; padding: 8px 20px; }
-  .hero { background-position: center, 28% center, center; }
-  .hero h1 { font-size: 28px; line-height: 40px; }
-  .person strong, .person span { display: block; }
-  .person strong { font-size: 22px; }
-  .footer { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 24px; }
-  .footer .logo { grid-column: 1 / -1; width: auto; }
-  .footer-col h4 { font-size: 20px; line-height: 30px; margin-bottom: 4px; }
-  .footer-col { font-size: 15px; gap: 10px; }
+/* =========================================
+   VERY SMALL PHONES
+   ========================================= */
+
+@media (max-width: 380px) {
+
+  .nav-links {
+    gap: 6px;
+    font-size: 6px;
+  }
+
+  .nav-actions {
+    gap: 4px;
+  }
+
+  .navbar .logo {
+    font-size: 16px;
+  }
+
+  .navbar .btn {
+    width: 48px;
+    font-size: 6px;
+  }
+
+  .about {
+    gap: 10px;
+  }
+
+  .about-image {
+    flex-basis: 35%;
+  }
+
+  .cards {
+    gap: 8px;
+  }
+
+  .card h3 {
+    font-size: 10px;
+  }
+
+  .cta {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .cta-text {
+    margin-left: 20px;
+  }
+
+  .footer {
+    gap: 8px;
+  }
+
 }
